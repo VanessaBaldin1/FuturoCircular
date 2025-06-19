@@ -1,0 +1,245 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Importa a fonte Poppins */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5; /* Fundo mais claro e suave */
+  color: #333;
+}
+
+header {
+  background-color: #004d33; /* Verde mais escuro e sóbrio para o header */
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar o header */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.logo img {
+  height: 45px; /* Levemente maior */
+  transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* Pequeno zoom no logo ao hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Aumenta um pouco o espaçamento entre os links */
+}
+
+.nav-links li a {
+  color: #66bb6a; /* Verde um pouco mais escuro para os links, mais visível */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem; /* Adiciona um padding para um "botão" discreto */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição para hover */
+}
+
+.nav-links li a:hover {
+  background-color: #008055; /* Um verde um pouco mais vibrante no hover */
+  color: #fff; /* Texto branco no hover para contraste */
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem; /* Mais padding para um visual mais espaçoso */
+  background: linear-gradient(to bottom, #d2f4e3, #eaf9f0); /* Gradiente suave */
+  color: #004d33; /* Cor mais escura para o texto do hero */
+  margin-top: 100px; /* Garante que o hero não fique por baixo do header fixo */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Título maior e mais impactante */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.4rem; /* Parágrafo maior */
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o parágrafo */
+  color: #222;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 2.5rem auto; /* Mais margem vertical */
+  padding: 2rem; /* Mais padding interno para as seções */
+  background-color: #fff; /* Fundo branco para as seções */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
+}
+
+.content h2 {
+  color: #006644;
+  margin-bottom: 1.5rem; /* Mais espaço abaixo do título */
+  border-left: 6px solid #00aa77; /* Borda mais grossa */
+  padding-left: 0.8rem;
+  font-size: 1.8rem; /* Títulos de seção maiores */
+}
+
+.content p {
+  margin-bottom: 1rem; /* Espaçamento entre parágrafos */
+  line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+  padding-left: 0; /* Remove o padding padrão da lista */
+  margin-top: 1rem;
+}
+
+ul li {
+  background-color: #f9fbfd; /* Fundo suave para cada item da lista */
+  margin-bottom: 0.5rem; /* Espaçamento entre itens da lista */
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #90ee90; /* Borda esquerda sutil para os itens */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #e6ffe6; /* Leve destaque no hover */
+}
+
+.mockup-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mockups um pouco maiores */
+  gap: 2rem; /* Mais espaçamento entre mockups */
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+/* Scroll-to-top button */
+#scrollToTopBtn {
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Fixado na tela */
+  bottom: 30px; /* 30px da parte inferior */
+  right: 30px; /* 30px da direita */
+  z-index: 99; /* Acima de outros elementos */
+  border: none; /* Sem borda */
+  outline: none; /* Sem outline ao focar */
+  background-color: #008055; /* Cor verde para o botão */
+  color: white; /* Cor do ícone */
+  cursor: pointer; /* Cursor de clique */
+  padding: 15px 20px; /* Padding para o botão */
+  border-radius: 50%; /* Faz o botão ser redondo */
+  font-size: 22px; /* Tamanho do ícone */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #006644; /* Cor mais escura no hover */
+  transform: translateY(-5px); /* Leve movimento para cima no hover */
+}
+
+
+
+.mockup-gallery img {
+  width: 100%;
+  max-width: 300px; /* Tamanho máximo aumentado */
+  height: auto;
+  border: none; /* Remove a borda padrão */
+  border-radius: 15px; /* Cantos mais arredondados */
+  padding: 15px; /* Mais padding interno */
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para hover */
+}
+
+.mockup-gallery img:hover {
+  transform: translateY(-8px); /* Efeito de "levantar" ao passar o mouse */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+video {
+  border-radius: 10px; /* Cantos arredondados para o vídeo */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Sombra para o vídeo */
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem; /* Mais padding no footer */
+  background-color: #004d33; /* Fundo do footer com a cor do header */
+  color: #e0e0e0; /* Cor do texto mais suave */
+  margin-top: 3rem; /* Mais margem superior */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil na parte superior do footer */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nav-links li a {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .mockup-gallery {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  .mockup-gallery img {
+    max-width: 90%; /* Ajuste para caber melhor em telas pequenas */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
